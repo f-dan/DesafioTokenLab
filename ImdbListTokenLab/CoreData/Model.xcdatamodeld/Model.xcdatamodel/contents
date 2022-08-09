@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19206" systemVersion="20G527" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DescriptionData" representedClassName="DescriptionData" syncable="YES" codeGenerationType="class">
+        <attribute name="adult" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="backdropURL" optional="YES" attributeType="String"/>
+        <attribute name="belongsToCollection" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="budget" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="genres" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="homepage" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="imdbID" optional="YES" attributeType="String"/>
+        <attribute name="originalLanguage" optional="YES" attributeType="String"/>
+        <attribute name="originalTitle" optional="YES" attributeType="String"/>
+        <attribute name="overview" optional="YES" attributeType="String"/>
+        <attribute name="popularity" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="posterURL" optional="YES" attributeType="String"/>
+        <attribute name="productionCompanies" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="productionCountries" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="revenue" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="runtime" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="spokenLanguages" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="status" optional="YES" attributeType="String"/>
+        <attribute name="tagline" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="video" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="voteCount" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="movies" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MovieData"/>
+    </entity>
+    <entity name="MovieData" representedClassName="MovieData" syncable="YES" codeGenerationType="class">
+        <attribute name="genres" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="posterURL" optional="YES" attributeType="String"/>
+        <attribute name="releaseDate" optional="YES" attributeType="String"/>
+        <attribute name="title" optional="YES" attributeType="String"/>
+        <attribute name="voteAverage" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="descriptions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DescriptionData"/>
+    </entity>
+    <elements>
+        <element name="DescriptionData" positionX="-63" positionY="27" width="128" height="419"/>
+        <element name="MovieData" positionX="-63" positionY="-18" width="128" height="134"/>
+    </elements>
+</model>
